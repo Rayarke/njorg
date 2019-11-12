@@ -1,6 +1,6 @@
 [mysql-db]
 ip = ''
-port = ''
-db_name = 'njorg'
+port = '3306'
+db_name = ''
 username = ''
 password = ''
