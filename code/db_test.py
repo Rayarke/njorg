@@ -11,7 +11,7 @@ def dbConnect():
     db_name = config.get('mysql-db', 'db_name')
     username = config.get('mysql-db', 'username')
     password = config.get('mysql-db', 'password')
-    conn = pymysql.connect('122.51.219.104', 'root', 'root2019', 'njorg')
+    conn = pymysql.connect('ip', 'root', 'password', 'dbname')
     cur = conn.cursor()
     sql = "insert into njorg(article_link,article_title,article_content,article_author,article_annex_link,article_time,created_time) values(%s,%s,%s,%s,%s,%s,%s)"
     article_link = 'article_link'
