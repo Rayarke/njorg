@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="face@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="face">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sys"/>
+    <schema id="7" parent="1" name="wcc_service_scm"/>
+    <table id="8" parent="2" name="enterprise"/>
+    <table id="9" parent="2" name="face"/>
+    <table id="10" parent="2" name="njorg"/>
+    <table id="11" parent="2" name="unsplash"/>
+    <column id="12" parent="8" name="id">
+      <Position>1</Position>
+      <DataType>int(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="13" parent="8" name="state">
+      <Position>2</Position>
+      <DataType>int(2)|0</DataType>
+    </column>
+    <column id="14" parent="8" name="is_valid">
+      <Position>3</Position>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <column id="15" parent="8" name="code">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="16" parent="8" name="fullname">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="17" parent="8" name="shortname">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="18" parent="8" name="category_id">
+      <Position>7</Position>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <column id="19" parent="8" name="create_by">
+      <Position>8</Position>
+      <DataType>int(4)|0</DataType>
+    </column>
+    <column id="20" parent="8" name="create_time">
+      <Position>9</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="21" parent="8" name="update_time">
+      <Position>10</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="22" parent="8" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="23" parent="9" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="24" parent="9" name="url">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="25" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="26" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="27" parent="10" name="article_link">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="28" parent="10" name="article_title">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="29" parent="10" name="article_author">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="30" parent="10" name="article_content">
+      <Position>5</Position>
+      <DataType>mediumtext|0</DataType>
+    </column>
+    <column id="31" parent="10" name="article_time">
+      <Position>6</Position>
+      <DataType>varchar(40)|0</DataType>
+    </column>
+    <column id="32" parent="10" name="article_annex_link">
+      <Position>7</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="33" parent="10" name="created_time">
+      <Position>8</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="34" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="11" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="36" parent="11" name="size">
+      <Position>2</Position>
+      <DataType>varchar(0)|0</DataType>
+    </column>
+    <column id="37" parent="11" name="name">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="38" parent="11" name="url">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="39" parent="11" name="createdtime">
+      <Position>5</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="40" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
