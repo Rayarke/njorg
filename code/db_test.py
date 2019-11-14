@@ -1,9 +1,9 @@
 import configparser
 import time
-from datetime import datetime
 import pymysql
-
-
+import wget
+from pathlib import Path
+import os
 def dbConnect():
     config = configparser.ConfigParser()
     config.read('/Users/schrodinger/njorg/config/mysql', encoding='utf-8')
@@ -28,6 +28,13 @@ def dbConnect():
     conn.commit()
     conn.close()
 
-
+def pdfDownload(url):
+    folder = '/Users/schrodinger/njorg/download_annex'
+    dirt = Path(folder)
+    if dirt.exists():
+        wget.download(url, '/Users/schrodinger/njorg/download_annex')
+    else:
+        os.makedirs(folder)
+        wget.download(url, '/Users/schrodinger/njorg/download_annex')
 if __name__ == '__main__':
-    dbConnect()
+    pdfDownload('http://njna.nanjing.gov.cn/cxrc/cxrczc/zcjj/201806/P020181021126493226218.pdf')

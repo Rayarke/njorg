@@ -1,9 +1,12 @@
 import configparser
+import os
 import time
 import urllib.request
 from datetime import datetime
+from pathlib import Path
 
 import pymysql
+import wget
 from bs4 import BeautifulSoup
 
 headers = {
@@ -77,12 +80,16 @@ def article(url):
         words = []
         for word in tyxl_ncon_p:
             words.append(word.prettify())
-
         article_content = ''.join(words)
         print(article_content)
     elif url[-4:] == '.pdf':
-        pass
-
+        folder = '/Users/schrodinger/njorg/download_annex'
+        dirt = Path(folder)
+        if dirt.exists():
+            wget.download(url, '/Users/schrodinger/njorg/download_annex')
+        else:
+            os.makedirs(folder)
+            wget.download(url, '/Users/schrodinger/njorg/download_annex')
     else:
         pass
     dbConnect(article_link, article_title, article_content, article_author, article_annex_link, article_time)
