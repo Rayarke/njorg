@@ -11,98 +11,176 @@
     <schema id="5" parent="1" name="performance_schema"/>
     <schema id="6" parent="1" name="qcj-db"/>
     <schema id="7" parent="1" name="sys"/>
-    <table id="8" parent="2" name="njorg"/>
-    <table id="9" parent="2" name="njorg_copy1"/>
-    <column id="10" parent="8" name="id">
+    <table id="8" parent="2" name="government_affairs"/>
+    <table id="9" parent="2" name="njorg"/>
+    <table id="10" parent="2" name="njorg_copy1"/>
+    <table id="11" parent="2" name="project_declaration"/>
+    <column id="12" parent="8" name="id">
       <Position>1</Position>
-      <Comment>自增id</Comment>
+      <Comment>政务公开数据表</Comment>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="11" parent="8" name="article_link">
+    <column id="13" parent="8" name="title">
       <Position>2</Position>
-      <Comment>文章链接</Comment>
-      <DataType>varchar(255)|0</DataType>
-    </column>
-    <column id="12" parent="8" name="article_title">
-      <Position>3</Position>
       <Comment>文章标题</Comment>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="13" parent="8" name="article_content">
+    <column id="14" parent="8" name="content_link">
+      <Position>3</Position>
+      <Comment>文章链接</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="15" parent="8" name="content_text">
       <Position>4</Position>
       <Comment>文章内容</Comment>
-      <DataType>varchar(255)|0</DataType>
+      <DataType>text|0</DataType>
     </column>
-    <column id="14" parent="8" name="article_author">
+    <column id="16" parent="8" name="created_time">
       <Position>5</Position>
-      <Comment>文章作者</Comment>
-      <DataType>varchar(255)|0</DataType>
+      <Comment>创建时间</Comment>
+      <DataType>timestamp|0</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <column id="15" parent="8" name="article_annex_link">
-      <Position>6</Position>
-      <Comment>文章附件地址</Comment>
-      <DataType>varchar(255)|0</DataType>
-    </column>
-    <column id="16" parent="8" name="article_time">
-      <Position>7</Position>
-      <Comment>文章发布时间</Comment>
-      <DataType>datetime|0</DataType>
-    </column>
-    <column id="17" parent="8" name="created_time">
-      <Position>8</Position>
-      <Comment>数据创建时间</Comment>
-      <DataType>datetime|0</DataType>
-    </column>
-    <key id="18" parent="8" name="PRIMARY">
+    <key id="17" parent="8" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="19" parent="9" name="id">
+    <column id="18" parent="9" name="id">
       <Position>1</Position>
       <Comment>自增id</Comment>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="20" parent="9" name="article_link">
+    <column id="19" parent="9" name="article_link">
       <Position>2</Position>
       <Comment>文章链接</Comment>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="21" parent="9" name="article_title">
+    <column id="20" parent="9" name="article_title">
       <Position>3</Position>
       <Comment>文章标题</Comment>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="22" parent="9" name="article_content">
+    <column id="21" parent="9" name="article_content">
       <Position>4</Position>
       <Comment>文章内容</Comment>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="23" parent="9" name="article_author">
+    <column id="22" parent="9" name="article_author">
       <Position>5</Position>
       <Comment>文章作者</Comment>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="24" parent="9" name="article_annex_link">
+    <column id="23" parent="9" name="article_annex_link">
       <Position>6</Position>
       <Comment>文章附件地址</Comment>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="25" parent="9" name="article_time">
+    <column id="24" parent="9" name="article_time">
       <Position>7</Position>
       <Comment>文章发布时间</Comment>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="26" parent="9" name="created_time">
+    <column id="25" parent="9" name="created_time">
       <Position>8</Position>
       <Comment>数据创建时间</Comment>
       <DataType>datetime|0</DataType>
     </column>
-    <key id="27" parent="9" name="PRIMARY">
+    <key id="26" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="10" name="id">
+      <Position>1</Position>
+      <Comment>自增id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="10" name="article_link">
+      <Position>2</Position>
+      <Comment>文章链接</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="29" parent="10" name="article_title">
+      <Position>3</Position>
+      <Comment>文章标题</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="30" parent="10" name="article_content">
+      <Position>4</Position>
+      <Comment>文章内容</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="31" parent="10" name="article_author">
+      <Position>5</Position>
+      <Comment>文章作者</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="32" parent="10" name="article_annex_link">
+      <Position>6</Position>
+      <Comment>文章附件地址</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="33" parent="10" name="article_time">
+      <Position>7</Position>
+      <Comment>文章发布时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="34" parent="10" name="created_time">
+      <Position>8</Position>
+      <Comment>数据创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="35" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="36" parent="11" name="id">
+      <Position>1</Position>
+      <Comment>项目申报数据表</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="11" name="title">
+      <Position>2</Position>
+      <Comment>文章标题</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="38" parent="11" name="release_time">
+      <Position>3</Position>
+      <Comment>发布时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="39" parent="11" name="source">
+      <Position>4</Position>
+      <Comment>文章来源</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="40" parent="11" name="article_link">
+      <Position>5</Position>
+      <Comment>文章链接</Comment>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="41" parent="11" name="article_content">
+      <Position>6</Position>
+      <Comment>文章内容</Comment>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="42" parent="11" name="created_time">
+      <Position>7</Position>
+      <Comment>创建时间</Comment>
+      <DataType>timestamp|0</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <key id="43" parent="11" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
